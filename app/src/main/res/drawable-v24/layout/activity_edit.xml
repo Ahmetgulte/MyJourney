@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="175dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/photo"
+        ></ImageView>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/country_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Country Name">
+
+        </EditText>
+        <EditText
+            android:id="@+id/city_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="City Name">
+
+
+        </EditText>
+        <Button
+            android:id="@+id/datePickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a Date"
+            android:textSize="24sp"
+            style="?android:spinnerStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="10dp"
+            android:onClick="openDatePicker" >
+    </Button>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Situation:"
+                android:textSize="18sp"></TextView>
+            <Spinner
+                android:id="@+id/situation_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
